@@ -1,16 +1,16 @@
 
-def MaximumSubarraySum(arr, K):
+def MaximumSubarraySum(nums, K):
     
-    n = len(arr)
+    n = len(nums)
     window_start = 0
     max_sum, window_sum = 0, 0
 
     for window_end in range(n):  # -----> O(n)
-        window_sum += arr[window_end]
+        window_sum += nums[window_end]
 
         if window_end >= K-1: # ----> O(n)
             max_sum = max(max_sum, window_sum)
-            window_sum -= arr[window_start]
+            window_sum -= nums[window_start]
             window_start += 1
 
     return max_sum
