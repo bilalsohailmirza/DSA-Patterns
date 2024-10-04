@@ -17,15 +17,15 @@ def SmallestSubArrayWithGivenSum(nums, target):
     window_sum = 0
     min_length = math.inf
 
-    for window_end in range(n):
+    for window_end in range(n): # O(n)
         window_sum += nums[window_end]
 
-        while window_sum >= target:
+        while window_sum >= target: # O(window_end)
             min_length = min(min_length, window_end - window_start + 1)
             window_sum -= nums[window_start]
             window_start += 1
         
-    if min_length == math.inf:
+    if min_length == math.inf: 
         return 0
     else:
         return min_length

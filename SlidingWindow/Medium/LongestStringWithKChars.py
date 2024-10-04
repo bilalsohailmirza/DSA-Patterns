@@ -36,8 +36,6 @@
         # calculate the max_length
 
 
-
-
 def LongestSubstringWithKDistinctChars(string, K):
     n = len(string)
     window_start, max_length = 0, 0

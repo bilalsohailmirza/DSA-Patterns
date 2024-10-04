@@ -1,7 +1,7 @@
 
 def MaximumSubarraySum(nums, K):
     
-    n = len(nums)
+    n = len(nums) # -> O(1)
     window_start = 0
     max_sum, window_sum = 0, 0
 
